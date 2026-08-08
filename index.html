@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nihar — Video Editor & Motion Designer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Minimal Loader Overlay -->
+  <div id="loader-overlay">
+    <div class="loader-bar-bg">
+      <div id="loader-progress" class="loader-bar-fill"></div>
+    </div>
+    <div id="loader-text" class="loader-text">Loading 0%</div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="navbar">
+    <a href="#" class="brand-logo">Nihar</a>
+    <nav id="main-nav" class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn-primary desktop-only-btn">
+      Get in touch
+      <span class="btn-icon-circle">→</span>
+    </a>
+    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+  </header>
+
+  <!-- Fullscreen Interactive Frame Animation Canvas -->
+  <canvas id="animation-canvas"></canvas>
+  
+  <!-- Subtle Vignette to maximize readability over live canvas -->
+  <div class="canvas-vignette"></div>
+
+  <!-- Page Content Layer (Scrolls over canvas) -->
+  <div class="page-content">
+
+    <!-- Section 1: Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-main-grid">
+        <div class="hero-left-col">
+          <p class="sub-heading">Hey, I'm Nihar.</p>
+          <h1 class="hero-title">
+            <span class="headline-line">Video Editor</span>
+            <span class="headline-line">&amp; Motion Designer</span>
+          </h1>
+        </div>
+
+        <div class="hero-right-col">
+          <h2 class="hero-statement">I turn ideas into visuals that move.</h2>
+          <p class="hero-description">From cinematic edits and short-form content to motion graphics and visual effects, I create visuals designed to capture attention and tell a story.</p>
+        </div>
+      </div>
+
+      <!-- 4 Core Service Items -->
+      <div class="disciplines-row">
+        <div class="discipline-item">
+          <span class="item-num">#01</span>
+          <span class="item-title">Short-Form Editing</span>
+        </div>
+        <div class="discipline-item">
+          <span class="item-num">#02</span>
+          <span class="item-title">Motion Graphics</span>
+        </div>
+        <div class="discipline-item">
+          <span class="item-num">#03</span>
+          <span class="item-title">Cinematic Edits</span>
+        </div>
+        <div class="discipline-item">
+          <span class="item-num">#04</span>
+          <span class="item-title">Visual Storytelling</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Motion Graphics Portfolio Showcase -->
+    <section id="projects" class="motion-graphics-section">
+      <div class="motion-graphics-header">
+        <h2 class="motion-graphics-title">Motion Graphics</h2>
+      </div>
+
+      <div class="motion-videos-list">
+        <!-- 01 -->
+        <div class="motion-video-item">
+          <span class="motion-num">01</span>
+          <div class="motion-video-frame">
+            <video class="motion-video" src="videos/motion_01.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="motion-video-item">
+          <span class="motion-num">02</span>
+          <div class="motion-video-frame">
+            <video class="motion-video" src="videos/motion_02.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="motion-video-item">
+          <span class="motion-num">03</span>
+          <div class="motion-video-frame">
+            <video class="motion-video" src="videos/motion_03.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="motion-video-item">
+          <span class="motion-num">04</span>
+          <div class="motion-video-frame">
+            <video class="motion-video" src="videos/motion_04.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="motion-video-item">
+          <span class="motion-num">05</span>
+          <div class="motion-video-frame">
+            <video class="motion-video" src="videos/motion_05.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Short-Form Editing Showcase (7 Client Videos in 3+3+1 Grid) -->
+    <section id="short-form" class="short-form-section">
+      <div class="short-form-header">
+        <h2 class="short-form-title">Short-Form Editing</h2>
+        <p class="short-form-subtitle">Short-form content created for clients, built around pacing, storytelling and attention.</p>
+      </div>
+
+      <div class="short-videos-grid">
+        <!-- 01 -->
+        <div class="short-video-item">
+          <span class="short-num">01</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_01.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <div class="short-video-item">
+          <span class="short-num">02</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_02.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <div class="short-video-item">
+          <span class="short-num">03</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_03.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <div class="short-video-item">
+          <span class="short-num">04</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_04.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <div class="short-video-item">
+          <span class="short-num">05</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_05.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <div class="short-video-item">
+          <span class="short-num">06</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_06.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+
+        <!-- 07 (Centered in Column 2) -->
+        <div class="short-video-item center-single">
+          <span class="short-num">07</span>
+          <div class="short-video-frame">
+            <video class="short-video" src="videos/short_07.mp4" controls muted playsinline preload="metadata" loop></video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Personal Creative Portfolio Overview -->
+    <section id="stats" class="agency-stats-section">
+      <div class="agency-top-grid">
+        <div class="agency-left-meta">
+          <div class="role-badge">
+            VIDEO EDITOR / MOTION DESIGNER
+          </div>
+          <div class="social-circles">
+            <a href="https://www.instagram.com/nihharise" target="_blank" rel="noopener noreferrer" class="instagram-btn">
+              <svg class="instagram-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="mailto:niharparekh14@gmail.com" class="email-btn">
+              <svg class="email-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              niharparekh14@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div class="agency-right-statement">
+          <h2 class="agency-statement-text">
+            I create cinematic edits, motion graphics and visuals built to stand out.
+          </h2>
+          <p class="portfolio-sub-statement">
+            From short-form content and cinematic edits to motion graphics and visual effects, I turn ideas into polished visual experiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 Capability Blocks -->
+      <div class="stats-counter-grid">
+        <div class="stat-card">
+          <div class="stat-number">50+</div>
+          <div class="stat-label-line">
+            <span class="orange-dot"></span> Videos Edited
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number text-mode">SHORT-FORM</div>
+          <div class="stat-label-line">
+            <span class="orange-dot"></span> Reels &amp; Social Content
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number text-mode">MOTION</div>
+          <div class="stat-label-line">
+            <span class="orange-dot"></span> Motion Graphics &amp; Animation
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtle Understated Tools Bar -->
+      <div class="tools-understated-bar">
+        <span>After Effects · Premiere Pro · Photoshop · AI Extended</span>
+      </div>
+    </section>
+
+    <!-- Section 5: Personal About Me Section -->
+    <section id="about" class="behind-designs-section">
+      <div class="section-tag">ABOUT ME</div>
+      
+      <div class="behind-main-grid">
+        <!-- Left Column: Personal Narrative & Philosophy -->
+        <div class="behind-left-col">
+          <h2 class="about-main-heading">
+            Video editing isn't just what I do.<br>
+            <span class="highlight-line">It's what I see.</span>
+          </h2>
+          
+          <div class="about-bio-body">
+            <p>I'm a self-taught video editor and motion designer with 4+ years of experience turning ideas into visual stories.</p>
+            <p>Editing started as a passion for me, and it never became something I got bored of. I enjoy every side of the process — from short-form content and cinematic editing to motion graphics, animation, VFX and visual storytelling.</p>
+            <p class="focus-heading">My biggest focus is vision.</p>
+            <p>I don't just edit from the creator's perspective. I think about the person watching. How will they feel? What will make them stop? What will keep them watching? What should the next frame feel like?</p>
+            <p class="emphasis-line">That's the perspective I bring into every edit.</p>
+          </div>
+        </div>
+
+        <!-- Right Column: Approach, Signature, Experience & Tools -->
+        <div class="behind-right-col">
+          <div class="approach-card">
+            <div class="approach-tag">MY APPROACH</div>
+            <h3 class="approach-title">See it from the viewer's side.</h3>
+            <p class="approach-desc">I try to experience every edit as the audience would — because a technically good video means nothing if nobody wants to watch it.</p>
+            
+            <div class="signature-quote">"HE IS SOMETHING."</div>
+          </div>
+
+          <div class="experience-compact-grid">
+            <div class="exp-block">
+              <div class="exp-number">4+ YEARS</div>
+              <div class="exp-label">Video Editing</div>
+            </div>
+            <div class="exp-block">
+              <div class="exp-number">SELF-TAUGHT</div>
+              <div class="exp-label">Always Learning</div>
+            </div>
+            <div class="exp-block">
+              <div class="exp-number">CURRENT FOCUS</div>
+              <div class="exp-label">Advanced Motion Graphics &amp; Animation</div>
+            </div>
+          </div>
+
+          <div class="about-tools-line">
+            After Effects · Premiere Pro · Photoshop · AI Tools
+          </div>
+
+          <p class="career-goal-text">
+            I'm building toward a career where editing, motion design and creative direction come together — while continuing to work with people who need strong visual storytelling.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Contact Section -->
+    <section id="contact" class="contact-clean-section">
+      <div class="contact-section-header">
+        <h2 class="contact-main-title">Contact</h2>
+        <p class="contact-sub-title">Available for video editing, motion graphics and creative projects.</p>
+      </div>
+
+      <div class="contact-cards-grid">
+        <!-- 01: CALL -->
+        <a href="tel:+919428810041" class="contact-card-item">
+          <span class="contact-card-num">01</span>
+          <span class="contact-card-label">CALL</span>
+          <span class="contact-card-val">+91 9428810041</span>
+        </a>
+
+        <!-- 02: INSTAGRAM -->
+        <a href="https://www.instagram.com/nihharise" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+          <span class="contact-card-num">02</span>
+          <span class="contact-card-label">INSTAGRAM</span>
+          <span class="contact-card-val">@nihharise</span>
+        </a>
+
+        <!-- 03: EMAIL -->
+        <a href="mailto:niharparekh14@gmail.com" class="contact-card-item">
+          <span class="contact-card-num">03</span>
+          <span class="contact-card-label">EMAIL</span>
+          <span class="contact-card-val">niharparekh14@gmail.com</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Minimal Footer -->
+    <footer class="footer-space">
+      <div class="footer-brand">Nihar</div>
+      <div class="footer-role">Video Editor &amp; Motion Designer</div>
+      <div class="footer-copy">© 2026 Nihar. All rights reserved.</div>
+    </footer>
+
+  </div>
+
+  <!-- Main Animation Controller Script -->
+  <script src="app.js"></script>
+</body>
+</html>
